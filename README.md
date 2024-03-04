@@ -1,8 +1,8 @@
-## How can you make a Metahuman look at the VR player? ##
+## How can you make a Metahuman look at the VR player?👁️‍🗨️ ##
    
 In the current project, participants and the virtual character engage in social interactions. Eye contact is a significant aspect of social interactions. This repository will explain how to make a metahuman maintain eye contact with the player.
    
-## Steps for creating a VR Character looking at the VR Player`s head: ##
+## 📝Steps for creating a VR Character looking at the VR Player`s head: ##
   
 1.	Create a new BP class under the Content folder in UE and name the character “BP_AI_ToLook”.
    
@@ -44,11 +44,15 @@ In the current project, participants and the virtual character engage in social 
    
 20.	Adjust the Look At node settings to ensure natural movement. Set Clamp Angle as 55 degrees (maximum angle) and set the Interpolation Time to 3 for smooth transitions under the Look Up Axis tab in Details section.
    
-21.	Your virtual character should now look at the VR player`s head. 
+21.	Your virtual character should now look at the VR player`s head. 👁️‍🗨️
    
 **Blueprints of the Looking At The Player**
-  
+   
+**Event Graph 🏃**   
+   
 <img src="./images/ABP_EventGraph.png" alt="ABP_EventGraph" width="800"/> 
+
+**Animation Graph 🏃** 
    
 <img src="./images/ABP_AnimGraph.png" alt="ABP_AnimGraph" width="800"/> 
    

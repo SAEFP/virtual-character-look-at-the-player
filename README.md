@@ -2,6 +2,10 @@
    
 In the current project, participants and the virtual character engage in social interactions. Eye contact is a significant aspect of social interactions. This repository will explain how to make a metahuman maintain eye contact with the player.
    
+Example video of the Metahuman looking towards the VR player:
+
+<img src="./images/Looking-At-The-Player-gif.gif" alt="Looking-At-The-Player-gif" width="500"/> 
+   
 ## 📝Steps for creating a VR Character looking at the VR Player`s head: ##
   
 1.	Create a new BP class under the Content folder in UE and name the character “BP_AI_ToLook”.
@@ -56,5 +60,42 @@ In the current project, participants and the virtual character engage in social 
    
 <img src="./images/ABP_AnimGraph.png" alt="ABP_AnimGraph" width="800"/> 
    
-## Steps for integrating Metahuman body to the VR Character BP: ##
+## 📝Steps for integrating Metahuman body to the Metahuman BP: ##
 
+1.	Open both BP_AI_ToLook and your Metahuman blueprint.
+   
+2.	In the Viewport tab of your Metahuman, select the Body under the Components section.
+   
+3.	Click the folder icon in the Skeletal Mesh Asset under the Details section.
+   
+4.	Go to the BP_AI_ToLook character. Select Mesh (CharacterMesh0).
+   
+5.	Click on the arrow icon in the Skeletal Mesh Asset under the Details to replace it with the MetaHuman character's body.
+   
+6.	Go to the MetaHuman BP, copy all MetaHuman components (body, legs, torso, face) by selecting them, and then go to the BP_AI_ToLook character and paste them into the BP_AI_ToLook character’s Mesh (CharacterMesh0).
+   
+7.	If the MetaHuman parts are not positioned correctly, select them, and use the reset arrow to align them properly.
+8.	Go back to the MetaHuman BP, select all face components, copy, and paste them onto the BP_AI_ToLook character, under the face component.
+   
+9.	Copy and paste the LODSync component as well.
+   
+10.	Select the Mesh (CharacterMesh0), click the folder icon in the Skeletal Mesh Asset under the Details. Select the body of the MetaHuman. Right-click, select Skeleton, and then select Assign Skeleton.
+   
+11.	Choose the SK_Mannequin skeleton and accept.
+   
+12.	Repeat the skeleton assignment for each MetaHuman component (torso, legs, feet) to ensure they use the SK_Mannequin skeleton.
+   
+13.	Open the BP_AI_ToLook character, set the Animation Class under the Details section to the ABP_Quinn_C.
+   
+14.	To adjust alignment issues, go to the Construction Script, dragging in torso, legs, and feet components, and using "Set Relative Post Component" to correct their positions relative to the main mesh.
+   
+15.	Compile and save the animation blueprint.
+   
+**Blueprint of the integrating Metahuman body to the Metahuman BP**
+   
+<img src="./images/BP_AI_ToLook_ConstructionScript.png" alt="BP_AI_ToLook_ConstructionScript" width="800"/>    
+   
+References   
+Here is the video I used for creating a VR Character looking at the VR Player`s head:https://www.youtube.com/watch?v=8skq8t_Fffk&list=PLqQpJGVeCiLH58DAlPWRCUrVvPkeZRC2e&index=15   
+   
+Here is the video I used for integrating Metahuman body to the Metahuman BP: https://www.youtube.com/watch?v=fz2-N-6hQNU&list=PLqQpJGVeCiLH58DAlPWRCUrVvPkeZRC2e&index=7
